@@ -38,25 +38,24 @@ Here is an example of how to use the API endpoints:
 
 ### List all running services
 ```bash
-curl -X http://localhost:8082/services
+curl -H "Authorization: c2FubWFyZwo=" http://localhost:8082/
 ```
 ![image](https://github.com/sanmarg/ServoOps/assets/50082154/524f5480-e0dd-40cc-ad12-1aa10f75f9af)
 
 ### Kill a service by PID
 ```bash
-curl -X DELETE http://localhost:8082/services/1234
+curl -X DELETE -H "Authorization: c2FubWFyZwo=" http://localhost:8082/services/1234
 ```
 
 ### Start a system service
 ```bash
-curl -X POST http://localhost:8082/services/start/servicename
+curl -X POST -H "Authorization: c2FubWFyZwo=" http://localhost:8082/services/start/servicename
 ```
 
 ### Stop a system service
 ```bash
-curl -X POST http://localhost:8082/services/stop/servicename
+curl -X POST -H "Authorization: c2FubWFyZwo=" http://localhost:8082/services/stop/servicename
 ```
-
 ## Contributing
 - Fork the repository.
 - Create a new branch: `git checkout -b feature`
